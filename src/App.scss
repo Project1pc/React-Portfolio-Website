@@ -1,0 +1,22 @@
+.app{
+    height: 100vh;
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth; // Iss se agar suppose mene koi icon pr click kra then usse jo bhi page khulta ho woh smoothly khulega and naa ki instantly.
+        scroll-snap-type: y mandatory; // Yeh scrolling thoda sa bhi kro toh next page pr chle jaaye uske liye hai.
+        scrollbar-width: none; // Yeh sirf FireFox ke liye hai mtlb sirf fireFox mei scroll bar hatt jayega.
+        &::-webkit-scrollbar{  // Aur baaki saare browsers mei se scroll bar hata ne ke liye yeh hai.
+            display: none;
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}

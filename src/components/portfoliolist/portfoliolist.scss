@@ -1,0 +1,18 @@
+@import "../../global.scss";
+
+.portfolioList{
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer; // Iss se jb bhi uss element pr point kroge cursor hath mei badal jaayega.
+
+    @include mobile{
+        margin: 0px 20px;
+    }
+
+    &.active{
+        background-color: $mainColor;
+        color: white;
+    }
+}
